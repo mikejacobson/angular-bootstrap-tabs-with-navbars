@@ -86,7 +86,7 @@ tabs = [
 
 where each `tab` object has the following properties:
 
-| Name | Type | Description |
+|         Name           | Type | Description |
 | ---------------------- | ------- | ---------------------------------------------------------|
 | title (Required) | HTML | The tab title/label; it can be HTML or plain text |
 | active (Required) | Boolean | Flag indicating whether the tab is active or not |
