@@ -1,0 +1,68 @@
+<div class="tabs-with-navbars">
+
+  <!-- tabs -->  
+  <div>
+    <ul class="nav nav-tabs" role="tablist">
+      
+      <li ng-repeat="tab in tabs" ng-class="{ active: tab.active }">
+        <a href="#" 
+           role="tab" 
+           data-toggle="tab" 
+           ng-bind-html="twnc.sanitizeHtml(tab.title)"
+           ng-click="twnc.handleClickOnTab(tab);">
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <!-- navbars -->
+  <div class="navbars-container">
+    <div class="tab-content">
+      
+      <div ng-repeat="tab in tabs" 
+           ng-init="tabIndex=$index" 
+           class="tab-pane"
+           ng-class="{ active: tab.active }">
+        
+        <nav class="navbar navbar-default">
+          
+          <ul class="nav navbar-nav in">
+            
+            <li ng-repeat="navbarItem in tab[twnc.navbarItemsArrayName]" 
+                ng-init="navbarItemIndex=$index" 
+                ng-class="{ active: navbarItem.active }">
+              <a ng-href="#" 
+                 data-toggle="tab" 
+                 ng-click="twnc.handleClickOnNavbarItem(navbarItem, tab)">
+                <span class="navbar-item-icon" ng-class="navbarItem.iconCssClass"></span>
+                <span ng-bind-html="twnc.sanitizeHtml(navbarItem.title)"></span>
+              </a>
+            </li>
+            
+          </ul>
+          
+        </nav>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  <!-- content panes -->
+  <div class="tab-content">
+    <div ng-repeat="tab in tabs" 
+         class="tab-pane" 
+         ng-class="{ active: tab.active }" 
+         ng-show="tab.active">
+      
+      <div ng-repeat="navbarItem in tab[twnc.navbarItemsArrayName]" 
+           ng-show="navbarItem.active"
+           ng-bind-html="twnc.sanitizeHtml(navbarItem.targetPaneContent)">
+      </div>
+      
+    </div>
+  </div>
+  
+  
+</div>
