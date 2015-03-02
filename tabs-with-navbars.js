@@ -82,6 +82,7 @@
   function tabsWithNavbars() {
     
     return {
+      restrict: 'EA',
       templateUrl: TEMPLATE_URL,
       replace: true,
       transclude: false,
