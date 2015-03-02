@@ -4,7 +4,7 @@ angular-bootstrap-tabs-with-navbars
 Angular directive for quickly creating a two-level menu system with Bootstrap tabs as the top level and a 
 Bootstrap navbar as the second level. That is, each tab has its own navbar acting as its submenu.
 
-<a href="http://plnkr.co/edit/7nFx83mQQJpUWfu38QxS?p=preview" target="_blank">Here's a plunk</a> showing it in action.
+<a href="http://plnkr.co/edit/7nFx83mQQJpUWfu38QxS?p=preview" target="_blank">Here's a plunk</a> showing it in action. (Be sure to make the plunk's preview area wide enough so the navbar lays out horizontally rather than stack vertically.)
 
 Usage
 -----
