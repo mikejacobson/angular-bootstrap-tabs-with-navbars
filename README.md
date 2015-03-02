@@ -99,7 +99,7 @@ And each navbar item object has the following properties:
 | ---------------------------- | ------- | ----------------------------------------------------|
 | `title` (Required) | HTML | The item title/label; it can be HTML or plain text |
 | `active` (Required) | Boolean | Flag indicating whether the item is active or not |
-| `iconCssClass` (Optional) | String | CSS class for the item's icon (e.g., glyphicon) |  
+| `iconCssClass` (Optional) | String | CSS class for the item's icon (e.g., a glyphicon class) |  
 | `targetPaneContent` (Required) | HTML | The HTML content of the item's content pane |
 
 
