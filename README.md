@@ -88,19 +88,19 @@ where each `tab` object has the following properties:
 
 |         Name           | Type | Description |
 | ---------------------- | ------- | ---------------------------------------------------------|
-| title (Required) | HTML | The tab title/label; it can be HTML or plain text |
-| active (Required) | Boolean | Flag indicating whether the tab is active or not |
-| navbarItems (Required) | Array | Array of navbar items for that tab; the property can be named anything you want because you pass the name into the directive on the `navbar-items-array-name` attribute |
+| `title` (Required) | HTML | The tab title/label; it can be HTML or plain text |
+| `active` (Required) | Boolean | Flag indicating whether the tab is active or not |
+| `navbarItems` (Required) | Array | Array of navbar items for that tab; the property can be named anything you want because you pass the name into the directive on the `navbar-items-array-name` attribute |
 
 
 And each navbar item object has the following properties:
 
 | Name | Type | Description |
 | ---------------------------- | ------- | ----------------------------------------------------|
-| title (Required) | HTML | The item title/label; it can be HTML or plain text |
-| active (Required) | Boolean | Flag indicating whether the item is active or not |
-| iconCssClass (Optional) | String | CSS class for the item's icon (e.g., glyphicon) |  
-| targetPaneContent (Required) | HTML | The HTML content of the item's content pane |
+| `title` (Required) | HTML | The item title/label; it can be HTML or plain text |
+| `active` (Required) | Boolean | Flag indicating whether the item is active or not |
+| `iconCssClass` (Optional) | String | CSS class for the item's icon (e.g., glyphicon) |  
+| `targetPaneContent` (Required) | HTML | The HTML content of the item's content pane |
 
 
 License
