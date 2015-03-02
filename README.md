@@ -15,68 +15,86 @@ Usage
 
 Overview
 --------
-Add the directive to your markup like so:
+The directive can be an element or an attribute, so you can add it to your markup like this:
 
 ```html
-        <tabs-with-navbars 
-          tabs="ctrl.tabs"
-          navbar-items-array-name="navbarItems">
-        </tabs-with-navbars>
-
+<tabs-with-navbars 
+  tabs="ctrl.tabs"
+  navbar-items-array-name="navbarItems">
+</tabs-with-navbars>
 ```
 
-It assumes you have a tabs data array like this:
+or like this:
+
+```html
+<div tabs-with-navbars 
+     tabs="ctrl.tabs"
+     navbar-items-array-name="navbarItems">
+</div>
+```
+
+You need to include the following attributes on the element:
+
+| Attribute | Type | Description |
+| --------- | ------ | ---------------------------------------------- |
+| `tabs` | Array     | a reference to your `tabs` data array (see below) |
+| `navbar-items-array-name` | String | the name of the property on your `tab` objects that contains that tab's navbar items array |
+
+
+The directive assumes you have a tabs data array that looks something like this:
+
 ```javascript
-    ctrl.tabs = [
-      {
-        title: 'Small Stuff',
-        active: true,
-        navbarItems: [
-          {
-            title: 'Pencils',
-            active: true,
-            iconCssClass: 'glyphicon glyphicon-pencil',
-            targetPaneContent: getTargetPaneHtml('Our Pencils!')
-          },
-          {
-            title: 'Glasses',
-            active: false,
-            iconCssClass: 'glyphicon glyphicon-glass',
-            targetPaneContent: getTargetPaneHtml('Our Glasses!')
-          },
-          {
-            title: 'Cameras',
-            active: false,
-            iconCssClass: 'glyphicon glyphicon-camera',
-            targetPaneContent: getTargetPaneHtml('Our Cameras!')
-          }
-        ]
-      },
-      {
-        title: 'Big Stuff',
-        active: false,
-        navbarItems: [
-          {
-            title: 'Planes',
-            active: true,
-            iconCssClass: 'glyphicon glyphicon-plane',
-            targetPaneContent: getTargetPaneHtml('Our Planes!')
-          },
-          {
-            title: 'Giant Magnets',
-            active: false,
-            iconCssClass: 'glyphicon glyphicon-magnet',
-            targetPaneContent: getTargetPaneHtml('Our Giant Magnets!')
-          },
-          {
-            title: 'Trees',
-            active: false,
-            iconCssClass: 'glyphicon glyphicon-tree-conifer',
-            targetPaneContent: getTargetPaneHtml('Our Trees!')
-          }
-        ]
-      }
-      
-    ];
+tabs = [
+        { // Tab 1: Small Stuff
+                title: 'Small Stuff',
+                active: true,
+                navbarItems: [ // Tab 1 Navbar Items
+                  {
+                    title: 'Pencils',
+                    active: true,
+                    iconCssClass: 'glyphicon glyphicon-pencil',
+                    targetPaneContent: '<div>Our Pencils!</div>'
+                  },
+                  {
+                    title: 'Glasses',
+                    active: false,
+                    iconCssClass: 'glyphicon glyphicon-glass',
+                    targetPaneContent: '<div>Our Glasses!</div>'
+                  }
+                ]
+        },
+        { // Tab 2: Big Stuff
+                title: 'Big Stuff',
+                active: false,
+                navbarItems: [ // Tab 2 Navbar Items
+                  {
+                    title: 'Planes',
+                    active: true,
+                    iconCssClass: 'glyphicon glyphicon-plane',
+                    targetPaneContent: '<div>Our Planes!</div>'
+                  },
+                  {
+                    title: 'Giant Magnets',
+                    active: false,
+                    iconCssClass: 'glyphicon glyphicon-magnet',
+                    targetPaneContent: '<div>Our Giant Magnets!</div>'
+                  }
+                ]
+        }
+
+];
 ```
 
+where each tab object has the following properties:
+| Name | Type | Description |
+| title (Required) | HTML | The tab title/label; it can be HTML or plain text |
+| active (Required) | Boolean | Flag indicating whether the tab is active or not |
+| navbarItems (Required) | Array | Array of navbar items for that tab; the property can be named anything you want because you pass the name into the directive on the `navbar-items-array-name` attribute |
+
+
+And each navbar item object has the following properties:
+| Name | Type | Description |
+| title (Required) | HTML | The item's title/label; it can be HTML or plain text |
+| active (Required) | Boolean | Flag indicating whether the item is active or not |
+| iconCssClass (Optional) | String | CSS class for the item's icon (e.g., glyphicon or font awesome icon) |  
+| targetPaneContent (Required) | HTML | The HTML content of the item's content pane |
