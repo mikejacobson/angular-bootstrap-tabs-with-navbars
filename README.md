@@ -36,7 +36,7 @@ or like this:
 You need to include the following attributes on the element:
 
 | Attribute | Type | Description |
-| ------------------------- | ------ | ---------------------------------------------- |
+| ------------------------- | ------ | ----------------------------------- |
 | `tabs` | Array     | A reference to your `tabs` data array (see below) |
 | `navbar-items-array-name` | String | The name of the property on your `tab` objects that contains that tab's navbar items array |
 
