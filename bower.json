@@ -1,0 +1,34 @@
+{
+  "name": "angular-bootstrap-tabs-with-navbars",
+  "version": "0.0.3",
+  "main": [
+    "scrolling-tabs.js",
+    "scrolling-tabs.css"
+  ],
+  "description": "Angular directive for Bootstrap Tabs with Navbars",
+  "homepage": "https://github.com/mikejacobson/angular-bootstrap-tabs-with-navbars",
+  "author": "Mike Jacobson <michaeljjacobson1@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikejacobson/angular-bootstrap-tabs-with-navbars.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    ".gitignore",
+    "bower.json",
+    "README.md",
+    "config.rb"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.12"
+  },
+  "keywords": [
+    "angularjs",
+    "angular",
+    "directive",
+    "bootstrap",
+    "tabs",
+    "navbar"
+  ]
+}
