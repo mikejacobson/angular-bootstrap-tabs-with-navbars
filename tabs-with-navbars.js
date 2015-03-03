@@ -94,7 +94,6 @@
       },
       link: function (scope, element, attrs, ctrl) {
         
-        // the content panes are transcluded in
         ctrl.init(scope);
       }
       

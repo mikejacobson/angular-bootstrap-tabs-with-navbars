@@ -21,7 +21,6 @@
     <div class="tab-content">
       
       <div ng-repeat="tab in tabs" 
-           ng-init="tabIndex=$index" 
            class="tab-pane"
            ng-class="{ active: tab.active }">
         
@@ -30,7 +29,6 @@
           <ul class="nav navbar-nav in">
             
             <li ng-repeat="navbarItem in tab[twnc.navbarItemsArrayName]" 
-                ng-init="navbarItemIndex=$index" 
                 ng-class="{ active: navbarItem.active }">
               <a ng-href="#" 
                  data-toggle="tab" 
